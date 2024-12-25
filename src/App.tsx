@@ -22,7 +22,7 @@ const aTodos = [
 
 const App = (): JSX.Element => {
   const [todos, setTodos] = useState(aTodos);
-  const handleremove = (id: string) => {
+  const handleRemove = (id: string) => {
     const newTodos = todos.filter((todo) => todo.id != id);
     setTodos(newTodos);
   };
@@ -45,7 +45,7 @@ const App = (): JSX.Element => {
     <div className="contenedor">
       <Todos
         onToggleCompleteTodo={handleCompleted}
-        onRemoveTodo={handleremove}
+        onRemoveTodo={handleRemove}
         todos={todos}
       />
     </div>
