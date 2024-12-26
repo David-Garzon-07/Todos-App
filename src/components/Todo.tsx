@@ -16,16 +16,16 @@ export const Todo: React.FC<Props> = ({
 }) => {
   return (
     <div className="view">
-      <>
         <input
-          className="toggle"
+        // TODO: Esta clase esta dando problemas. Si la pones de nuevo funciona raro, 
+        // pruebala y cambiala adecuadamente
+          // className="toggle"
           type="checkbox"
           checked={completed}
           onChange={(event) => {
             onToggleCompleteTodo({ id, completed: event.target.checked });
           }}
         />
-      </>
       <label>{title}</label>
       <button
         className="destroy"
